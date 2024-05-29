@@ -1,0 +1,11 @@
+.options-sub-menu-container {
+    max-width: fit-content;
+}
+
+.options-sub-menu-header {
+    display: none;
+}
+
+.checkbox{
+    display: none;
+}
