@@ -21,5 +21,7 @@ npm run dev
 ## External dependencies
 - react-select-multi-level : https://www.npmjs.com/package/react-select-multi-level?activeTab=readme 
 
+## Preview
+https://github.com/virenribadiya/multi-level-select-react/assets/108461765/aeea98a3-99f7-4f7e-9d4c-9558bd09fbde
 
 
