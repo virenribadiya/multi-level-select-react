@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css'
 import MultiLevelSelect from 'react-select-multi-level';
 
@@ -120,7 +121,7 @@ const transformData = (data) => {
     const transformedItem = {
       value: item.id,
       label: item.name,
-      options: item.children.length ? transformData(item.children):undefined
+      options: item.children.length ? transformData(item.children) : undefined
     };
     return transformedItem;
   });
@@ -130,9 +131,20 @@ const transformData = (data) => {
 const options = transformData(data);
 
 export default function App() {
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleChange = (selected) => {
+    setSelectedOption(selected);
+    console.log("selected value:",selected);
+  };
+
   return (
-    <div> 
-      <MultiLevelSelect placeholder="Select Item" options={options} />
+    <div>
+      <MultiLevelSelect
+        placeholder="Select Item"
+        options={options}
+        onChange={handleChange}
+      />
     </div>
   );
 }
